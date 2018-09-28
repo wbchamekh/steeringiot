@@ -1,16 +1,15 @@
-from sqlalchemy import Column, Integer, String, ForeignKey
-from sqlalchemy.ext.declarative import declarative_base
+from flask import current_app as app
 
-Base = declarative_base()
+db = app.db
 
 
-class Coverage(Base):
+class Coverage(db.Model):
     __tablename__ = 'coverage'
 
-    id = Column(Integer, primary_key=True)
-    alias = Column(String(5), unique=False)
-    cov = Column(Integer, unique=False)
-    customer_fk = Column(Integer, ForeignKey('customer.id'))
+    id = db.Column(db.Integer, primary_key=True)
+    alias = db.Column(db.String(5), unique=False)
+    cov = db.Column(db.Integer, unique=False)
+    customer_fk = db.Column(db.Integer, db.ForeignKey('customer.id'))
 
     def __init__(self, alias=None, cov=None, customer_fk=None):
         self.alias = alias

@@ -1,21 +1,21 @@
-from sqlalchemy import Column, Integer, String
-from sqlalchemy.ext.declarative import declarative_base
-from sqlalchemy.orm import relationship
+from flask import current_app as app
 
-Base = declarative_base()
+db = app.db
 
 
-class Customer(Base):
+class Customer(db.Model):
     __tablename__ = 'customer'
 
-    id = Column(Integer, primary_key=True)
-    name = Column(Integer, unique=True)
-    networkList = Column(String(255), unique=False)
-    coverages = relationship('Coverage', backref='customer_fk')
+    id = db.Column(db.Integer, primary_key=True)
+    name = db.Column(db.Integer, unique=True)
+    networkList = db.Column(db.String(255), unique=False)
+    coverages = db.relationship('Coverage', backref='customer')
+
 
     def __init__(self, name=None, networkList=None):
         self.name = name
         self.networkList = networkList
+
 
     def __repr__(self):
         return "<Customer(name='%s', networkList='%s')>" % (self.name, self.networkList)

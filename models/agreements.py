@@ -1,22 +1,21 @@
-from sqlalchemy import Column, Integer, String, Boolean
-from sqlalchemy.ext.declarative import declarative_base
+from flask import current_app as app
 
-Base = declarative_base()
+db = app.db
 
 
-class Agreements(Base):
+class AgreementDetails(db.Model):
     __tablename__ = 'agreements'
 
-    id = Column(Integer, primary_key=True)
-    agreementId = Column(Integer, unique=True)
-    aparty = Column(String(255), unique=False)
-    bparty = Column(String(255), unique=True)
-    start = Column(String(120), unique=False)
-    stop = Column(String(120), unique=False)
-    autoreconduction = Column(String(5), unique=False)
-    groupdeal = Column(Boolean, unique=False)
-    network = Column(String(5), unique=False)
-    customer = Column(String(255), unique=False)
+    id = db.Column(db.Integer, primary_key=True)
+    agreementId = db.Column(db.Integer, unique=True)
+    aparty = db.Column(db.String(255), unique=False)
+    bparty = db.Column(db.String(255), unique=True)
+    start = db.Column(db.String(120), unique=False)
+    stop = db.Column(db.String(120), unique=False)
+    autoreconduction = db.Column(db.String(5), unique=False)
+    groupdeal = db.Column(db.Boolean, unique=False)
+    network = db.Column(db.String(5), unique=False)
+    customer = db.Column(db.String(255), unique=False)
 
     def __init__(self, agreementId=None, aparty=None, bparty=None, start=None,
                  stop=None, autoreconduction=None, groupdeal=None, network=None, customer=None):
@@ -30,9 +29,9 @@ class Agreements(Base):
         self.network = network
         self.customer = customer
 
-
     def __repr__(self):
         return "<Agreements(agreementId='%s', aparty='%s', bparty='%s', start='%s', stop='%s'" \
-               ", autoreconduction='%s', groupdeal='%s', network='%s',customer_fk='%s')>" % (self.agreementId, self.agreementId, self.bparty
-                                                                                             , self.start, self.stop, self.autoreconduction,
-                                                                                             self.groupdeal, self.network, self.customer)
+               ", autoreconduction='%s', groupdeal='%s', network='%s',customer_fk='%s')>" % (
+               self.agreementId, self.agreementId, self.bparty
+               , self.start, self.stop, self.autoreconduction,
+               self.groupdeal, self.network, self.customer)

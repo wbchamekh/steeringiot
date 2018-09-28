@@ -1,7 +1,7 @@
 {
   "DiscountAgreement": {
     "Basic": {
-      "id": 1024,
+      "AgreementId": 1024,
       "AParty":"TUNOR,FRAF1",
       "BParty":"DEUD2,GBRVF",
       "Start": "01-01-2019",

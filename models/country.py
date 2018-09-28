@@ -1,14 +1,13 @@
-from sqlalchemy import Column, Integer, String
-from sqlalchemy.ext.declarative import declarative_base
+from flask import current_app as app
 
-Base = declarative_base()
+db = app.db
 
 
-class Country(Base):
+class Country(db.Model):
     __tablename__ = 'country'
 
-    id = Column(Integer, primary_key=True)
-    name = Column(String(100), unique=False)
+    id = db.Column(db.Integer, primary_key=True)
+    name = db.Column(db.String(100), unique=False)
 
     def __init__(self, name=None):
         self.name = name
