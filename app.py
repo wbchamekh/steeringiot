@@ -1,10 +1,12 @@
 from flask import Flask
 from flask_sqlalchemy import SQLAlchemy
 from utils.jsonParser import JsonParser
+from config import Config
 
 app = Flask(__name__)
-# app.config['SQLALCHEMY_DATABASE_URI'] = 'mysql://root:Walid78!@192.168.43.201/steeringiot'
-app.config['SQLALCHEMY_DATABASE_URI'] = 'mysql://root:Walid78!@localhost/steeringiot'
+
+app.config.from_object('config.Development')
+
 db = SQLAlchemy(app)
 app.db = db
 
@@ -26,8 +28,7 @@ def setup():
 
     # Start Parsing the agreement details and commit into database steeringiot:
     jsonType = JsonParser().jsonParser(jsonurl)
-    discountAgreement = jsonType['DiscountAgreement']
-    basic = discountAgreement['Basic']
+    basic = jsonType['DiscountAgreement']['Basic']
     db.session.add(AgreementDetails(basic['AgreementId'], basic['AParty'], basic['BParty'], basic['Start'], basic['Stop'],
                                     basic['Autoreconduction'], basic['GroupDeal'], basic['Network'], basic['Customer']))
 
@@ -37,7 +38,7 @@ def setup():
 @app.route('/')
 def root():
     agreements = db.session.query(AgreementDetails).all()
-    return u"<br>".join([u"{id}: {0}".format(agreement.agreementId) for agreement in agreements])
+    return u"<br>".join([u"{0}: {0}".format(agreement.agreementId) for agreement in agreements])
 
 
 if __name__ == '__main__':
