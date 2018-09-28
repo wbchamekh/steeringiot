@@ -9,12 +9,12 @@ class Coverage(db.Model):
     id = db.Column(db.Integer, primary_key=True)
     alias = db.Column(db.String(5), unique=False)
     cov = db.Column(db.Integer, unique=False)
-    customer_fk = db.Column(db.Integer, db.ForeignKey('customer.id'))
+    network_fk = db.Column(db.Integer, db.ForeignKey('network.id'))
 
-    def __init__(self, alias=None, cov=None, customer_fk=None):
+    def __init__(self, alias=None, cov=None, network_fk=None):
         self.alias = alias
         self.cov = cov
-        self.customer_fk = customer_fk
+        self.network_fk = network_fk
 
     def __repr__(self):
-        return "<Coverage(alias='%s', cov='%s', customer_fk='%s')>" % (self.alias, self.cov, self.customer_fk)
+        return "<Coverage(alias='%s', cov='%s', network_fk='%s')>" % (self.alias, self.cov, self.network_fk)

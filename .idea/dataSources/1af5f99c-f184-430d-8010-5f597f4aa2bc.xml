@@ -915,7 +915,7 @@
     <table id="229" parent="5" name="agreements"/>
     <table id="230" parent="5" name="country"/>
     <table id="231" parent="5" name="coverage"/>
-    <table id="232" parent="5" name="customer"/>
+    <table id="232" parent="5" name="network"/>
     <column id="233" parent="229" name="id">
       <Position>1</Position>
       <DataType>int(11)|0s</DataType>
@@ -1025,13 +1025,13 @@
       <DataType>int(11)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="254" parent="231" name="customer_fk">
+    <column id="254" parent="231" name="network_fk">
       <Position>4</Position>
       <DataType>int(11)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <index id="255" parent="231" name="customer_fk">
-      <ColNames>customer_fk</ColNames>
+    <index id="255" parent="231" name="network_fk">
+      <ColNames>network_fk</ColNames>
       <Type>btree</Type>
     </index>
     <key id="256" parent="231" name="PRIMARY">
@@ -1040,9 +1040,9 @@
       <Primary>1</Primary>
     </key>
     <foreign-key id="257" parent="231" name="coverage_ibfk_1">
-      <ColNames>customer_fk</ColNames>
+      <ColNames>network_fk</ColNames>
       <RefSchemaName>steeringiot</RefSchemaName>
-      <RefTableName>customer</RefTableName>
+      <RefTableName>network</RefTableName>
       <RefColNames>id</RefColNames>
     </foreign-key>
     <column id="258" parent="232" name="id">
@@ -1052,29 +1052,24 @@
       <SequenceIdentity>1</SequenceIdentity>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="259" parent="232" name="name">
+    <column id="259" parent="232" name="alias">
       <Position>2</Position>
-      <DataType>int(11)|0s</DataType>
-      <ColumnKind>normal</ColumnKind>
-    </column>
-    <column id="260" parent="232" name="networkList">
-      <Position>3</Position>
       <DataType>varchar(255)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <index id="261" parent="232" name="name">
-      <ColNames>name</ColNames>
+    <index id="260" parent="232" name="alias">
+      <ColNames>alias</ColNames>
       <Unique>1</Unique>
       <Type>btree</Type>
     </index>
-    <key id="262" parent="232" name="PRIMARY">
+    <key id="261" parent="232" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>id</ColNames>
       <Primary>1</Primary>
     </key>
-    <key id="263" parent="232" name="name">
-      <ColNames>name</ColNames>
-      <UnderlyingIndexName>name</UnderlyingIndexName>
+    <key id="262" parent="232" name="alias">
+      <ColNames>alias</ColNames>
+      <UnderlyingIndexName>alias</UnderlyingIndexName>
     </key>
   </database-model>
 </dataSource>

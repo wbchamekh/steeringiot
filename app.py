@@ -13,7 +13,7 @@ app.db = db
 
 with app.app_context():
     from models.agreements import AgreementDetails
-    from models.customer import Customer
+    from models.network import Network
     from models.country import Country
     from models.coverage import Coverage
 
@@ -38,7 +38,6 @@ def setup():
         db.session.add(
             AgreementDetails(basic['AgreementId'], basic['AParty'], basic['BParty'], basic['Start'], basic['Stop'],
                              basic['Autoreconduction'], basic['GroupDeal'], basic['Network'], basic['Customer']))
-
         db.session.commit()
 
 
