@@ -24,12 +24,15 @@ def setup():
     db.drop_all()
     db.create_all()
 
-    # define the path
-    currentDirectory = pathlib.Path('/home/walid/devops/steeringiot/static/data')
+    # config file has STATIC_FOLDER='/home/walid/devops/steeringiot/static/data'
+    directory = app.static_url_path = app.config.get('STATIC_FOLDER')
 
+    # define the path
+    currentDirectory = pathlib.Path(directory)
+
+    # Walk through the currentDirectory, parse the json files and persist the data
     for currentFile in currentDirectory.iterdir():
         jsonurl = currentFile
-        # Start Parsing the agreement details and commit into database steeringiot:
         jsonType = JsonParser().jsonParser(jsonurl)
         basic = jsonType['DiscountAgreement']['Basic']
         db.session.add(
@@ -44,6 +47,8 @@ def root():
     agreements = db.session.query(AgreementDetails).all()
     return u"<br>".join([u"{0}: {0}".format(agreement.agreementId) for agreement in agreements])
 
+
+db.session.remove()
 
 if __name__ == '__main__':
     app.run('127.0.0.1', 5000, debug=True)
