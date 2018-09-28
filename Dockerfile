@@ -7,6 +7,6 @@ RUN pip3 install SQLAlchemy
 RUN pip3 install flask_sqlalchemy
 COPY . /app
 WORKDIR /app
-# RUN pip3 install -r requirements.txt for test
+# RUN pip3 install -r requirements.txt
 ENTRYPOINT ["python3.6"]
 CMD ["app.py"]
