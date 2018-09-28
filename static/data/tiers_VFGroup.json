@@ -1,0 +1,51 @@
+{
+  "DiscountAgreement": {
+    "Basic": {
+      "id": 1024,
+      "AParty":"TUNOR,FRAF1",
+      "BParty":"DEUD2,GBRVF",
+      "Start": "01-01-2019",
+      "Stop": "31-12-2019",
+      "Autoreconduction": "60",
+      "GroupDeal": 1,
+      "Network": "TUNOR",
+      "Customer": "Orange Group"
+    },
+    "Inbound": {
+      "Model": "Tiered",
+      "Tiers": [
+        "VoiceMO",
+        "1-10000",
+        "10001-20000",
+        "20001+"
+      ],
+      "DIOT": {
+        "VoiceMO": "1,0.5,0.1",
+        "VoiceMT": "0,0,0]",
+        "SMS MO" : "0.05,0.05,0.05",
+        "SMS MT" : "1,1,1",
+        "Data" : "1,1,1",
+        "VoiceIncr": 1,
+        "DataIncr": 10
+      }
+    },
+    "Outbound": {
+      "Model": "Tiered",
+      "Tiers": [
+        "VoiceMO",
+        "1-10000",
+        "10001-20000",
+        "20001+"
+      ],
+      "DIOT": {
+        "VoiceMO": "1,0.5,0.1",
+        "VoiceMT": "0,0,0]",
+        "SMS MO" : "0.05,0.05,0.05",
+        "SMS MT" : "1,1,1",
+        "Data" : "1,1,1",
+        "VoiceIncr": 1,
+        "DataIncr": 10
+      }
+    }
+  }
+}
