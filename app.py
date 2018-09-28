@@ -1,7 +1,8 @@
+import pathlib
+
 from flask import Flask
 from flask_sqlalchemy import SQLAlchemy
 from utils.jsonParser import JsonParser
-from config import Config
 
 app = Flask(__name__)
 
@@ -23,16 +24,19 @@ def setup():
     db.drop_all()
     db.create_all()
 
-    # define the json file to parse
-    jsonurl = '/home/walid/devops/steeringiot/static/data/tiers_VFGroup.json'
+    # define the path
+    currentDirectory = pathlib.Path('/home/walid/devops/steeringiot/static/data')
 
-    # Start Parsing the agreement details and commit into database steeringiot:
-    jsonType = JsonParser().jsonParser(jsonurl)
-    basic = jsonType['DiscountAgreement']['Basic']
-    db.session.add(AgreementDetails(basic['AgreementId'], basic['AParty'], basic['BParty'], basic['Start'], basic['Stop'],
-                                    basic['Autoreconduction'], basic['GroupDeal'], basic['Network'], basic['Customer']))
+    for currentFile in currentDirectory.iterdir():
+        jsonurl = currentFile
+        # Start Parsing the agreement details and commit into database steeringiot:
+        jsonType = JsonParser().jsonParser(jsonurl)
+        basic = jsonType['DiscountAgreement']['Basic']
+        db.session.add(
+            AgreementDetails(basic['AgreementId'], basic['AParty'], basic['BParty'], basic['Start'], basic['Stop'],
+                             basic['Autoreconduction'], basic['GroupDeal'], basic['Network'], basic['Customer']))
 
-    db.session.commit()
+        db.session.commit()
 
 
 @app.route('/')
