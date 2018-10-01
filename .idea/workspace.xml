@@ -5,14 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="5db17bdc-5829-4853-9040-592e8e77665a" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/1af5f99c-f184-430d-8010-5f597f4aa2bc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/1af5f99c-f184-430d-8010-5f597f4aa2bc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dbinit.sql" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/models/siot.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app.py" beforeDir="false" afterPath="$PROJECT_DIR$/app.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/models/agreements.py" beforeDir="false" afterPath="$PROJECT_DIR$/models/agreements.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/models/country.py" beforeDir="false" afterPath="$PROJECT_DIR$/models/country.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/models/coverage.py" beforeDir="false" afterPath="$PROJECT_DIR$/models/coverage.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/data/tiers_TMobileGroup.json" beforeDir="false" afterPath="$PROJECT_DIR$/static/data/tiers_TMobileGroup.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/data/tiers_VFGroup.json" beforeDir="false" afterPath="$PROJECT_DIR$/static/data/tiers_VFGroup.json" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -21,7 +17,7 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="CoverageDataManager">
-    <SUITE FILE_PATH="coverage/steeringiot$steeringiot.coverage" NAME="steeringiot Coverage Results" MODIFIED="1538394011863" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/steeringiot$steeringiot.coverage" NAME="steeringiot Coverage Results" MODIFIED="1538398909501" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
   <component name="DatabaseView">
     <option name="SHOW_INTERMEDIATE" value="true" />
@@ -61,34 +57,35 @@
           <entry key="project.open.time.11" value="1" />
           <entry key="project.open.time.6" value="1" />
           <entry key="project.open.time.7" value="1" />
-          <entry key="project.open.time.8" value="4" />
-          <entry key="project.opened" value="7" />
+          <entry key="project.open.time.8" value="5" />
+          <entry key="project.opened" value="8" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
           <entry key="Dockerfile" value="2" />
-          <entry key="agreements" value="20" />
-          <entry key="country" value="3" />
-          <entry key="coverage" value="12" />
+          <entry key="agreements" value="21" />
+          <entry key="country" value="7" />
+          <entry key="coverage" value="14" />
           <entry key="customer" value="9" />
           <entry key="html" value="1" />
-          <entry key="json" value="8" />
-          <entry key="network" value="4" />
+          <entry key="json" value="9" />
+          <entry key="network" value="6" />
           <entry key="pth" value="1" />
-          <entry key="py" value="64" />
-          <entry key="sql" value="3" />
+          <entry key="py" value="72" />
+          <entry key="sql" value="5" />
           <entry key="users" value="2" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
-          <entry key="Database Element" value="50" />
+          <entry key="Database Element" value="59" />
           <entry key="Dockerfile" value="2" />
           <entry key="HTML" value="1" />
-          <entry key="JSON" value="8" />
+          <entry key="JSON" value="9" />
           <entry key="PLAIN_TEXT" value="1" />
-          <entry key="Python" value="64" />
+          <entry key="Python" value="72" />
+          <entry key="SQL" value="2" />
           <entry key="Scratch" value="3" />
         </counts>
       </usages-collector>
@@ -99,7 +96,8 @@
           <entry key="cell" value="166" />
           <entry key="dummy" value="18" />
           <entry key="json" value="886" />
-          <entry key="py" value="3595" />
+          <entry key="py" value="3781" />
+          <entry key="sql" value="271" />
           <entry key="txt" value="111" />
         </counts>
       </usages-collector>
@@ -108,7 +106,8 @@
           <entry key="Dockerfile" value="9" />
           <entry key="JSON" value="886" />
           <entry key="PLAIN_TEXT" value="129" />
-          <entry key="Python" value="3617" />
+          <entry key="Python" value="3803" />
+          <entry key="SQL" value="271" />
           <entry key="Scratch" value="166" />
         </counts>
       </usages-collector>
@@ -119,8 +118,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="825">
-              <caret line="59" column="27" selection-start-line="59" selection-start-column="8" selection-end-line="59" selection-end-column="27" />
+            <state relative-caret-position="673">
+              <caret line="62" column="42" lean-forward="true" selection-start-line="62" selection-start-column="42" selection-end-line="62" selection-end-column="42" />
               <folding>
                 <element signature="e#0#14#0" expanded="true" />
               </folding>
@@ -129,37 +128,15 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/models/agreements.py">
+        <entry file="file://$PROJECT_DIR$/database/inbound.py">
+          <provider selected="true" editor-type-id="text-editor" />
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/database/agreementDetails.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="360">
-              <caret line="24" column="24" selection-start-line="24" selection-start-column="24" selection-end-line="24" selection-end-column="24" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="das://1af5f99c-f184-430d-8010-5f597f4aa2bc/schema/steeringiot/table/coverage">
-          <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-            <state>
-              <filtering enabled="true" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="das://1af5f99c-f184-430d-8010-5f597f4aa2bc/schema/steeringiot/table/agreements">
-          <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-            <state>
-              <filtering enabled="true" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="das://1af5f99c-f184-430d-8010-5f597f4aa2bc/schema/steeringiot/table/country">
-          <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-            <state>
-              <filtering enabled="true" />
+            <state relative-caret-position="150">
+              <caret line="10" selection-start-line="10" selection-end-line="10" />
             </state>
           </provider>
         </entry>
@@ -174,10 +151,46 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/config.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="90">
+              <caret line="6" column="23" selection-start-line="6" selection-start-column="17" selection-end-line="6" selection-end-column="23" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/dbinit.sql">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="45">
+              <caret line="3" column="45" lean-forward="true" selection-start-line="3" selection-start-column="45" selection-end-line="3" selection-end-column="45" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/models/agreements.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state>
+              <caret selection-end-line="35" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/models/siot.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="195">
+              <caret line="13" column="50" lean-forward="true" selection-start-line="13" selection-start-column="50" selection-end-line="13" selection-end-column="50" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/models/coverage.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="255">
-              <caret line="17" column="36" lean-forward="true" selection-start-line="17" selection-start-column="36" selection-end-line="17" selection-end-column="36" />
+              <caret line="17" column="36" selection-start-line="17" selection-start-column="36" selection-end-line="17" selection-end-column="36" />
             </state>
           </provider>
         </entry>
@@ -193,6 +206,11 @@
         <option value="Python Script" />
       </list>
     </option>
+  </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>session</find>
+    </findStrings>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -218,9 +236,13 @@
         <option value="$PROJECT_DIR$/models/country.py" />
         <option value="$PROJECT_DIR$/static/data/tiers_VFGroup.json" />
         <option value="$PROJECT_DIR$/static/data/tiers_TMobileGroup.json" />
-        <option value="$PROJECT_DIR$/app.py" />
         <option value="$PROJECT_DIR$/models/coverage.py" />
         <option value="$PROJECT_DIR$/models/agreements.py" />
+        <option value="$PROJECT_DIR$/utils/dbinit.py" />
+        <option value="$PROJECT_DIR$/static/db/dbinit.sql" />
+        <option value="$PROJECT_DIR$/dbinit.sql" />
+        <option value="$PROJECT_DIR$/app.py" />
+        <option value="$PROJECT_DIR$/models/siot.py" />
       </list>
     </option>
   </component>
@@ -249,6 +271,11 @@
             <path>
               <item name="steeringiot" type="b2602c69:ProjectViewProjectNode" />
               <item name="steeringiot" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="steeringiot" type="b2602c69:ProjectViewProjectNode" />
+              <item name="steeringiot" type="462c0819:PsiDirectoryNode" />
+              <item name="database" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="steeringiot" type="b2602c69:ProjectViewProjectNode" />
@@ -398,13 +425,20 @@
       <option name="project" value="LOCAL" />
       <updated>1538152087574</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="fix foreign key issue with introducing of the app_context functionality">
+      <created>1538394086577</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1538394086577</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="25" width="1920" height="990" extended-state="6" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.16275346" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.16435432" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -427,7 +461,7 @@
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="right" id="SciView" order="3" />
-      <window_info active="true" anchor="right" id="Database" order="4" visible="true" weight="0.17075774" />
+      <window_info anchor="right" id="Database" order="4" visible="true" weight="0.17075774" />
     </layout>
     <layout-to-restore>
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.15955175" />
@@ -510,20 +544,10 @@
     <entry file="file://$PROJECT_DIR$/database/outbound.py">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/database/inbound.py">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
     <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/1af5f99c-f184-430d-8010-5f597f4aa2bc/console.sql">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/models/models.py" />
-    <entry file="file://$PROJECT_DIR$/database/agreementDetails.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="10" selection-start-line="10" selection-end-line="10" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/venv/lib/python3.6/site-packages/sqlalchemy/ext/declarative/clsregistry.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="106">
@@ -559,13 +583,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/venv/lib/python3.6/site-packages/flask/app.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="15">
-          <caret line="1854" selection-start-line="1854" selection-end-line="1854" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/config.json" />
     <entry file="file:///usr/lib/python3.6/json/decoder.py">
       <provider selected="true" editor-type-id="text-editor">
@@ -582,13 +599,6 @@
             <marker date="1538066198666" expanded="true" signature="44:46" ph="..." />
             <marker date="1538066198666" expanded="true" signature="81:82" ph="..." />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/config.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="10" column="26" lean-forward="true" selection-start-line="10" selection-start-column="26" selection-end-line="10" selection-end-column="26" />
         </state>
       </provider>
     </entry>
@@ -609,13 +619,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/static/data/tiers_VFGroup.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="15">
-          <caret line="10" column="24" lean-forward="true" selection-start-line="10" selection-start-column="24" selection-end-line="10" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/static/data/tiers_TMobileGroup.json">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="165">
@@ -630,20 +633,48 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app.py">
+    <entry file="file://$PROJECT_DIR$/models/coverage.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="825">
-          <caret line="59" column="27" selection-start-line="59" selection-start-column="8" selection-end-line="59" selection-end-column="27" />
+        <state relative-caret-position="255">
+          <caret line="17" column="36" selection-start-line="17" selection-start-column="36" selection-end-line="17" selection-end-column="36" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/static/db/dbinit.sql">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="15">
+          <caret line="1" column="51" lean-forward="true" selection-start-line="1" selection-start-column="51" selection-end-line="1" selection-end-column="51" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/utils/dbinit.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="285">
+          <caret line="19" column="27" lean-forward="true" selection-start-line="19" selection-start-column="27" selection-end-line="19" selection-end-column="27" />
           <folding>
-            <element signature="e#0#14#0" expanded="true" />
+            <element signature="e#0#15#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/models/agreements.py">
+    <entry file="file://$PROJECT_DIR$/static/data/tiers_VFGroup.json">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="360">
-          <caret line="24" column="24" selection-start-line="24" selection-start-column="24" selection-end-line="24" selection-end-column="24" />
+        <state relative-caret-position="150">
+          <caret line="10" column="24" lean-forward="true" selection-start-line="10" selection-start-column="24" selection-end-line="10" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/venv/lib/python3.6/site-packages/flask/app.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="195">
+          <caret line="1854" selection-start-line="1854" selection-end-line="1854" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/dbinit.sql">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="45">
+          <caret line="3" column="45" lean-forward="true" selection-start-line="3" selection-start-column="45" selection-end-line="3" selection-end-column="45" />
         </state>
       </provider>
     </entry>
@@ -661,6 +692,13 @@
         </state>
       </provider>
     </entry>
+    <entry file="das://1af5f99c-f184-430d-8010-5f597f4aa2bc/schema/steeringiot/table/coverage">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
     <entry file="das://1af5f99c-f184-430d-8010-5f597f4aa2bc/schema/steeringiot/table/network">
       <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
         <state>
@@ -668,17 +706,44 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/models/coverage.py">
+    <entry file="file://$PROJECT_DIR$/config.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="17" column="36" lean-forward="true" selection-start-line="17" selection-start-column="36" selection-end-line="17" selection-end-column="36" />
+        <state relative-caret-position="90">
+          <caret line="6" column="23" selection-start-line="6" selection-start-column="17" selection-end-line="6" selection-end-column="23" />
         </state>
       </provider>
     </entry>
-    <entry file="das://1af5f99c-f184-430d-8010-5f597f4aa2bc/schema/steeringiot/table/coverage">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+    <entry file="file://$PROJECT_DIR$/app.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="673">
+          <caret line="62" column="42" lean-forward="true" selection-start-line="62" selection-start-column="42" selection-end-line="62" selection-end-column="42" />
+          <folding>
+            <element signature="e#0#14#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/database/inbound.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/database/agreementDetails.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="10" selection-start-line="10" selection-end-line="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/models/agreements.py">
+      <provider selected="true" editor-type-id="text-editor">
         <state>
-          <filtering enabled="true" />
+          <caret selection-end-line="35" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/models/siot.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="195">
+          <caret line="13" column="50" lean-forward="true" selection-start-line="13" selection-start-column="50" selection-end-line="13" selection-end-column="50" />
         </state>
       </provider>
     </entry>

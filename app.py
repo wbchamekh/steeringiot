@@ -2,6 +2,8 @@ import pathlib
 
 from flask import Flask
 from flask_sqlalchemy import SQLAlchemy
+from sqlalchemy import text
+
 from utils.jsonParser import JsonParser
 
 app = Flask(__name__)
@@ -25,29 +27,19 @@ def setup():
     db.create_all()
 
     # database init with dummy data
-    db.session.add(Network('TUNOR'))
-    db.session.add(Network('FRAF1'))
-    db.session.add(Country('Germany'))
-    db.session.add(Country('United Kingdom'))
-    db.session.add(Coverage('DEUD1', 1, 1, 1))
-    db.session.add(Coverage('DEUD1', 1, 2, 1))
-    db.session.add(Coverage('DEUD2', 1, 1, 1))
-    db.session.add(Coverage('DEUD2', 1, 2, 1))
-    db.session.add(Coverage('DEUE1', 1, 1, 1))
-    db.session.add(Coverage('DEUE1', 1, 2, 1))
-    db.session.add(Coverage('GBRVF', 1, 1, 2))
-    db.session.add(Coverage('GBRVF', 1, 2, 2))
-    db.session.add(Coverage('GBROR', 1, 1, 2))
-    db.session.add(Coverage('GBROR', 1, 2, 2))
+    file = open('dbinit.sql', 'r')
+    connection = db.session
+    connection.execute(text(file.read()))
+    connection.commit()
 
-
-    # config file has STATIC_FOLDER='/home/walid/devops/steeringiot/static/data'
+    # config file has STATIC_FOLDER:
+    # '/home/walid/devops/steeringiot/static/data'
     directory = app.static_url_path = app.config.get('STATIC_FOLDER')
 
     # define the path
     currentDirectory = pathlib.Path(directory)
 
-    # Walk through the currentDirectory, parse the json files and persist the data
+    # Walk through the currentDirectory, parse the discount agreements from th json files and persist the data
     for currentFile in currentDirectory.iterdir():
         jsonurl = currentFile
         jsonType = JsonParser().jsonParser(jsonurl)
@@ -55,7 +47,6 @@ def setup():
         db.session.add(
             AgreementDetails(basic['AgreementId'], basic['AParty'], basic['BParty'], basic['Start'], basic['Stop'],
                              basic['Autoreconduction'], basic['GroupDeal'], basic['Network']))
-
 
         db.session.commit()
 
