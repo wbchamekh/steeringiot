@@ -24,6 +24,23 @@ def setup():
     db.drop_all()
     db.create_all()
 
+    # database init with dummy data
+    db.session.add(Network('TUNOR'))
+    db.session.add(Network('FRAF1'))
+    db.session.add(Country('Germany'))
+    db.session.add(Country('United Kingdom'))
+    db.session.add(Coverage('DEUD1', 1, 1, 1))
+    db.session.add(Coverage('DEUD1', 1, 2, 1))
+    db.session.add(Coverage('DEUD2', 1, 1, 1))
+    db.session.add(Coverage('DEUD2', 1, 2, 1))
+    db.session.add(Coverage('DEUE1', 1, 1, 1))
+    db.session.add(Coverage('DEUE1', 1, 2, 1))
+    db.session.add(Coverage('GBRVF', 1, 1, 2))
+    db.session.add(Coverage('GBRVF', 1, 2, 2))
+    db.session.add(Coverage('GBROR', 1, 1, 2))
+    db.session.add(Coverage('GBROR', 1, 2, 2))
+
+
     # config file has STATIC_FOLDER='/home/walid/devops/steeringiot/static/data'
     directory = app.static_url_path = app.config.get('STATIC_FOLDER')
 
@@ -37,7 +54,9 @@ def setup():
         basic = jsonType['DiscountAgreement']['Basic']
         db.session.add(
             AgreementDetails(basic['AgreementId'], basic['AParty'], basic['BParty'], basic['Start'], basic['Stop'],
-                             basic['Autoreconduction'], basic['GroupDeal'], basic['Network'], basic['Customer']))
+                             basic['Autoreconduction'], basic['GroupDeal'], basic['Network']))
+
+
         db.session.commit()
 
 

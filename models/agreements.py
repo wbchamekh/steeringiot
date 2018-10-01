@@ -15,10 +15,9 @@ class AgreementDetails(db.Model):
     autoreconduction = db.Column(db.String(5), unique=False)
     groupdeal = db.Column(db.Boolean, unique=False)
     network = db.Column(db.String(5), unique=False)
-    customer = db.Column(db.String(255), unique=False)
 
     def __init__(self, agreementId=None, aparty=None, bparty=None, start=None,
-                 stop=None, autoreconduction=None, groupdeal=None, network=None, customer=None):
+                 stop=None, autoreconduction=None, groupdeal=None, network=None):
         self.agreementId = agreementId
         self.aparty = aparty
         self.bparty = bparty
@@ -27,11 +26,10 @@ class AgreementDetails(db.Model):
         self.autoreconduction = autoreconduction
         self.groupdeal = groupdeal
         self.network = network
-        self.customer = customer
 
     def __repr__(self):
         return "<Agreements(agreementId='%s', aparty='%s', bparty='%s', start='%s', stop='%s'" \
-               ", autoreconduction='%s', groupdeal='%s', network='%s',customer_fk='%s')>" % (
+               ", autoreconduction='%s', groupdeal='%s', network='%s')>" % (
                self.agreementId, self.agreementId, self.bparty
                , self.start, self.stop, self.autoreconduction,
-               self.groupdeal, self.network, self.customer)
+               self.groupdeal, self.network)

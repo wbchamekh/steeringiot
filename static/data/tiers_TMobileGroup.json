@@ -8,8 +8,7 @@
       "Stop": "31-12-2019",
       "Autoreconduction": "60",
       "GroupDeal": 1,
-      "Network": "TUNOR",
-      "Customer": "TMobile Group"
+      "Network": "TUNOR"
     },
     "Inbound": {
       "Model": "Tiered",

@@ -7,10 +7,11 @@ class Country(db.Model):
     __tablename__ = 'country'
 
     id = db.Column(db.Integer, primary_key=True)
-    name = db.Column(db.String(100), unique=False)
+    name = db.Column(db.String(100), unique=True)
+    countries = db.relationship('Coverage', backref='country')
 
     def __init__(self, name=None):
         self.name = name
 
     def __repr__(self):
-        return "<Country(name='%s', networkList='%s')>" % self.name
+        return "<Country(name='%s')>" % self.name

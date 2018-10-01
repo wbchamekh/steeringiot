@@ -963,111 +963,130 @@
       <DataType>varchar(5)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="242" parent="229" name="customer">
-      <Position>10</Position>
-      <DataType>varchar(255)|0s</DataType>
-      <ColumnKind>normal</ColumnKind>
-    </column>
-    <index id="243" parent="229" name="agreementId">
+    <index id="242" parent="229" name="agreementId">
       <ColNames>agreementId</ColNames>
       <Unique>1</Unique>
       <Type>btree</Type>
     </index>
-    <index id="244" parent="229" name="bparty">
+    <index id="243" parent="229" name="bparty">
       <ColNames>bparty</ColNames>
       <Unique>1</Unique>
       <Type>btree</Type>
     </index>
-    <key id="245" parent="229" name="PRIMARY">
+    <key id="244" parent="229" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>id</ColNames>
       <Primary>1</Primary>
     </key>
-    <key id="246" parent="229" name="agreementId">
+    <key id="245" parent="229" name="agreementId">
       <ColNames>agreementId</ColNames>
       <UnderlyingIndexName>agreementId</UnderlyingIndexName>
     </key>
-    <key id="247" parent="229" name="bparty">
+    <key id="246" parent="229" name="bparty">
       <ColNames>bparty</ColNames>
       <UnderlyingIndexName>bparty</UnderlyingIndexName>
     </key>
-    <column id="248" parent="230" name="id">
+    <column id="247" parent="230" name="id">
       <Position>1</Position>
       <DataType>int(11)|0s</DataType>
       <NotNull>1</NotNull>
       <SequenceIdentity>1</SequenceIdentity>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="249" parent="230" name="name">
+    <column id="248" parent="230" name="name">
       <Position>2</Position>
       <DataType>varchar(100)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
+    <index id="249" parent="230" name="name">
+      <ColNames>name</ColNames>
+      <Unique>1</Unique>
+      <Type>btree</Type>
+    </index>
     <key id="250" parent="230" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>id</ColNames>
       <Primary>1</Primary>
     </key>
-    <column id="251" parent="231" name="id">
+    <key id="251" parent="230" name="name">
+      <ColNames>name</ColNames>
+      <UnderlyingIndexName>name</UnderlyingIndexName>
+    </key>
+    <column id="252" parent="231" name="id">
       <Position>1</Position>
       <DataType>int(11)|0s</DataType>
       <NotNull>1</NotNull>
       <SequenceIdentity>1</SequenceIdentity>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="252" parent="231" name="alias">
+    <column id="253" parent="231" name="alias">
       <Position>2</Position>
       <DataType>varchar(5)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="253" parent="231" name="cov">
+    <column id="254" parent="231" name="cov">
       <Position>3</Position>
       <DataType>int(11)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="254" parent="231" name="network_fk">
+    <column id="255" parent="231" name="network_fk">
       <Position>4</Position>
       <DataType>int(11)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <index id="255" parent="231" name="network_fk">
+    <column id="256" parent="231" name="country_fk">
+      <Position>5</Position>
+      <DataType>int(11)|0s</DataType>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <index id="257" parent="231" name="network_fk">
       <ColNames>network_fk</ColNames>
       <Type>btree</Type>
     </index>
-    <key id="256" parent="231" name="PRIMARY">
+    <index id="258" parent="231" name="country_fk">
+      <ColNames>country_fk</ColNames>
+      <Type>btree</Type>
+    </index>
+    <key id="259" parent="231" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>id</ColNames>
       <Primary>1</Primary>
     </key>
-    <foreign-key id="257" parent="231" name="coverage_ibfk_1">
+    <foreign-key id="260" parent="231" name="coverage_ibfk_1">
       <ColNames>network_fk</ColNames>
       <RefSchemaName>steeringiot</RefSchemaName>
       <RefTableName>network</RefTableName>
       <RefColNames>id</RefColNames>
     </foreign-key>
-    <column id="258" parent="232" name="id">
+    <foreign-key id="261" parent="231" name="coverage_ibfk_2">
+      <ColNames>country_fk</ColNames>
+      <RefSchemaName>steeringiot</RefSchemaName>
+      <RefTableName>country</RefTableName>
+      <RefColNames>id</RefColNames>
+    </foreign-key>
+    <column id="262" parent="232" name="id">
       <Position>1</Position>
       <DataType>int(11)|0s</DataType>
       <NotNull>1</NotNull>
       <SequenceIdentity>1</SequenceIdentity>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="259" parent="232" name="alias">
+    <column id="263" parent="232" name="alias">
       <Position>2</Position>
       <DataType>varchar(255)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <index id="260" parent="232" name="alias">
+    <index id="264" parent="232" name="alias">
       <ColNames>alias</ColNames>
       <Unique>1</Unique>
       <Type>btree</Type>
     </index>
-    <key id="261" parent="232" name="PRIMARY">
+    <key id="265" parent="232" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>id</ColNames>
       <Primary>1</Primary>
     </key>
-    <key id="262" parent="232" name="alias">
+    <key id="266" parent="232" name="alias">
       <ColNames>alias</ColNames>
       <UnderlyingIndexName>alias</UnderlyingIndexName>
     </key>
