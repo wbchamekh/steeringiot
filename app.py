@@ -18,15 +18,17 @@ with app.app_context():
     from models.network import Network
     from models.country import Country
     from models.coverage import Coverage
+    from models.siot import StandardIot
+    from models.diot import DiscountedIot
 
 
 @app.before_first_request
 def setup():
-    # Recreate database each time for demo
+    # Recreate service each time for demo
     db.drop_all()
     db.create_all()
 
-    # database init with dummy data
+    # service init with dummy data
     file = open('dbinit.sql', 'r')
     connection = db.session
     connection.execute(text(file.read()))
@@ -44,9 +46,11 @@ def setup():
         jsonurl = currentFile
         jsonType = JsonParser().jsonParser(jsonurl)
         basic = jsonType['DiscountAgreement']['Basic']
+        nw = basic['Network']
+        network = Network.query.filter_by(alias=nw).first()
         db.session.add(
             AgreementDetails(basic['AgreementId'], basic['AParty'], basic['BParty'], basic['Start'], basic['Stop'],
-                             basic['Autoreconduction'], basic['GroupDeal'], basic['Network']))
+                             basic['Autoreconduction'], basic['GroupDeal'], network.id))
 
         db.session.commit()
 

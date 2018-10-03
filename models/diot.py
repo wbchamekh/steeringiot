@@ -3,11 +3,12 @@ from flask import current_app as app
 db = app.db
 
 
-class StandardIot(db.Model):
-    __tablename__ = 'siot'
+class DiscountedIot(db.Model):
+    __tablename__ = 'diot'
 
     id = db.Column(db.Integer, primary_key=True)
     alias = db.Column(db.String(255), unique=False)
+    model = db.Column(db.String(255), unique=False)
     service = db.Column(db.String(255), unique=False)
     currency = db.Column(db.String(255), unique=False)
     destination = db.Column(db.String(255), unique=False)
@@ -22,11 +23,12 @@ class StandardIot(db.Model):
     network_fk = db.Column(db.Integer, db.ForeignKey('network.id'))
     country_fk = db.Column(db.Integer, db.ForeignKey('country.id'))
 
-    def __init__(self, alias=None, service=None, currency=None, destination=None,
+    def __init__(self, alias=None, model=None, service=None, currency=None, destination=None,
                  iotairtimepeak=None, iotairtimeoffpeak=None, iotiddpeak=None, iotiddoffpeak=None,
                  firstChargingInt=None, secondChargingInt=None, taxPercentage=None, taxFix=None,
                  network_fk=None, country_fk=None):
         self.alias = alias
+        self.model = model
         self.service = service
         self.currency = currency
         self.destination = destination
@@ -42,8 +44,8 @@ class StandardIot(db.Model):
         self.country_fk = country_fk
 
     def __repr__(self):
-        return "<StandardIot(alias='%s', service='%s', currency='%s', destination='%s', iotairtimepeak='%s'" \
+        return "<DiscountedIot(alias='%s', model='%s', service='%s', currency='%s', destination='%s', iotairtimepeak='%s'" \
                ", iotairtimeoffpeak='%s', iotiddpeak='%s', iotiddoffpeak='%s', firstChargingInt='%s', secondChargingInt='%s'" \
-               ", taxPercentage='%s', taxFix='%s', network_fk='%s', country_fk='%s')>" % (self.alias, self.service, self.currency, self.destination,
+               ", taxPercentage='%s', taxFix='%s', network_fk='%s', country_fk='%s')>" % (self.alias, self.model, self.service, self.currency, self.destination,
                 self.iotairtimepeak, self.iotairtimeoffpeak, self.iotiddpeak, self.iotiddoffpeak, self.firstChargingInt, self.secondChargingInt,
                 self.taxPercentage, self.taxFix, self.network_fk, self.country_fk)

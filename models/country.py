@@ -8,7 +8,7 @@ class Country(db.Model):
 
     id = db.Column(db.Integer, primary_key=True)
     name = db.Column(db.String(100), unique=True)
-    countries = db.relationship('Coverage', backref='country')
+    networks = db.relationship('Network', backref='country')
 
     def __init__(self, name=None):
         self.name = name
