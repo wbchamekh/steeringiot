@@ -19,7 +19,12 @@ with app.app_context():
     from models.country import Country
     from models.coverage import Coverage
     from models.siot import StandardIot
-    from models.diot import DiscountedIot
+    from models.dealModels.balancedUnbalanced import BalancedUnbalanced
+    from models.dealModels.invoiceFlat import InvoiceFlat
+    from models.dealModels.revenueCommitment import RevenueCommitment
+    from models.dealModels.sendOrPay import SendOrPay
+    from models.dealModels.standardFlat import StandardFlat
+    from models.dealModels.tiered import Tiered
 
 
 @app.before_first_request
@@ -50,7 +55,7 @@ def setup():
         network = Network.query.filter_by(alias=nw).first()
         db.session.add(
             AgreementDetails(basic['AgreementId'], basic['AParty'], basic['BParty'], basic['Start'], basic['Stop'],
-                             basic['Autoreconduction'], basic['GroupDeal'], network.id))
+                             basic['Autoreconduction'], basic['GroupDeal'], basic['DealStatus'], network.id))
 
         db.session.commit()
 

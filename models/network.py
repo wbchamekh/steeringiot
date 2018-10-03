@@ -12,7 +12,7 @@ class Network(db.Model):
     coverages = db.relationship('Coverage', backref='network')
     agreements = db.relationship('AgreementDetails', backref='network')
     siots = db.relationship('StandardIot', backref='network')
-    diots = db.relationship('DiscountedIot', backref='network')
+
 
     def __init__(self, alias=None):
         self.alias = alias
