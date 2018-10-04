@@ -5,19 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="5db17bdc-5829-4853-9040-592e8e77665a" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/models/dealModels/balancedUnbalanced.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/models/dealModels/invoiceFlat.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/models/dealModels/revenueCommitment.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/models/dealModels/sendOrPay.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/models/dealModels/standardFlat.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/models/dealModels/tiered.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/1af5f99c-f184-430d-8010-5f597f4aa2bc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/1af5f99c-f184-430d-8010-5f597f4aa2bc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/utils/stringTockenizer.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app.py" beforeDir="false" afterPath="$PROJECT_DIR$/app.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/models/agreements.py" beforeDir="false" afterPath="$PROJECT_DIR$/models/agreements.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/models/diot.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/models/network.py" beforeDir="false" afterPath="$PROJECT_DIR$/models/network.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/models/siot.py" beforeDir="false" afterPath="$PROJECT_DIR$/models/siot.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/models/dealModels/tiered.py" beforeDir="false" afterPath="$PROJECT_DIR$/models/dealModels/tiered.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/static/data/tiers_TMobileGroup.json" beforeDir="false" afterPath="$PROJECT_DIR$/static/data/tiers_TMobileGroup.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/static/data/tiers_VFGroup.json" beforeDir="false" afterPath="$PROJECT_DIR$/static/data/tiers_VFGroup.json" afterDir="false" />
     </list>
@@ -28,7 +19,7 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="CoverageDataManager">
-    <SUITE FILE_PATH="coverage/steeringiot$steeringiot.coverage" NAME="steeringiot Coverage Results" MODIFIED="1538574235639" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/steeringiot$steeringiot.coverage" NAME="steeringiot Coverage Results" MODIFIED="1538667803019" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
   <component name="DatabaseView">
     <option name="SHOW_INTERMEDIATE" value="true" />
@@ -64,77 +55,83 @@
     <session id="-2027827377">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="10" />
+          <entry key="project.closed" value="12" />
           <entry key="project.open.time.10" value="1" />
           <entry key="project.open.time.11" value="1" />
           <entry key="project.open.time.6" value="1" />
           <entry key="project.open.time.7" value="1" />
-          <entry key="project.open.time.8" value="5" />
+          <entry key="project.open.time.8" value="7" />
           <entry key="project.open.time.9" value="2" />
-          <entry key="project.opened" value="11" />
+          <entry key="project.opened" value="13" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
           <entry key="Dockerfile" value="2" />
-          <entry key="agreements" value="24" />
+          <entry key="agreements" value="26" />
+          <entry key="balancedUnbalanced" value="1" />
           <entry key="country" value="10" />
           <entry key="coverage" value="15" />
           <entry key="customer" value="9" />
           <entry key="diot" value="1" />
           <entry key="html" value="1" />
-          <entry key="json" value="15" />
+          <entry key="json" value="20" />
           <entry key="network" value="9" />
           <entry key="pth" value="1" />
-          <entry key="py" value="111" />
+          <entry key="py" value="131" />
           <entry key="siot" value="2" />
           <entry key="sql" value="6" />
+          <entry key="tiered" value="3" />
           <entry key="users" value="2" />
+          <entry key="xml" value="1" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
-          <entry key="Database Element" value="72" />
+          <entry key="Database Element" value="78" />
           <entry key="Dockerfile" value="2" />
           <entry key="HTML" value="1" />
-          <entry key="JSON" value="15" />
+          <entry key="JSON" value="20" />
           <entry key="PLAIN_TEXT" value="1" />
-          <entry key="Python" value="111" />
+          <entry key="Python" value="131" />
           <entry key="SQL" value="3" />
           <entry key="Scratch" value="3" />
+          <entry key="XML" value="1" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="Dockerfile" value="9" />
-          <entry key="Python Console" value="42" />
+          <entry key="Python Console" value="203" />
           <entry key="cell" value="166" />
           <entry key="dummy" value="18" />
-          <entry key="json" value="930" />
-          <entry key="py" value="5490" />
+          <entry key="json" value="1363" />
+          <entry key="py" value="6570" />
           <entry key="sql" value="423" />
           <entry key="txt" value="111" />
+          <entry key="xml" value="51" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key="Dockerfile" value="9" />
-          <entry key="JSON" value="930" />
+          <entry key="JSON" value="1363" />
           <entry key="PLAIN_TEXT" value="129" />
-          <entry key="Python" value="5532" />
+          <entry key="Python" value="6773" />
           <entry key="SQL" value="423" />
           <entry key="Scratch" value="166" />
+          <entry key="XML" value="51" />
         </counts>
       </usages-collector>
     </session>
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="315">
-              <caret line="57" column="52" selection-start-line="57" selection-start-column="36" selection-end-line="57" selection-end-column="52" />
+            <state relative-caret-position="200">
+              <caret line="65" selection-start-line="65" selection-end-line="65" />
               <folding>
                 <element signature="e#0#14#0" expanded="true" />
               </folding>
@@ -142,35 +139,8 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/static/data/tiers_TMobileGroup.json">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="135">
-              <caret line="9" column="21" lean-forward="true" selection-start-line="9" selection-start-column="21" selection-end-line="9" selection-end-column="21" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/static/data/tiers_VFGroup.json">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="120">
-              <caret line="8" column="31" lean-forward="true" selection-start-line="8" selection-start-column="31" selection-end-line="8" selection-end-column="31" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/models/agreements.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="315">
-              <caret line="21" column="41" selection-start-line="21" selection-start-column="41" selection-end-line="21" selection-end-column="41" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="das://1af5f99c-f184-430d-8010-5f597f4aa2bc/schema/steeringiot/table/agreements">
+      <file pinned="false" current-in-tab="true">
+        <entry file="das://1af5f99c-f184-430d-8010-5f597f4aa2bc/schema/steeringiot/table/tiered">
           <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
             <state>
               <filtering enabled="true" />
@@ -179,46 +149,19 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/models/dealModels/balancedUnbalanced.py">
+        <entry file="file://$PROJECT_DIR$/static/data/tiers_TMobileGroup.json">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="45">
-              <caret line="3" lean-forward="true" selection-start-line="3" selection-end-line="3" />
+            <state relative-caret-position="196">
+              <caret line="20" column="18" selection-start-line="20" selection-start-column="18" selection-end-line="20" selection-end-column="18" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/models/country.py">
+        <entry file="file://$PROJECT_DIR$/static/data/tiers_VFGroup.json">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="105">
-              <caret line="7" lean-forward="true" selection-start-line="7" selection-end-line="7" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/models/network.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="210">
-              <caret line="14" selection-start-line="14" selection-end-line="14" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/models/dealModels/invoiceFlat.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="300">
-              <caret line="20" column="55" selection-end-line="20" selection-end-column="75" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/models/dealModels/standardFlat.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="300">
-              <caret line="20" column="63" lean-forward="true" selection-start-line="20" selection-start-column="63" selection-end-line="20" selection-end-column="63" />
+            <state relative-caret-position="255">
+              <caret line="38" column="19" selection-start-line="38" selection-start-column="19" selection-end-line="38" selection-end-column="19" />
             </state>
           </provider>
         </entry>
@@ -277,17 +220,19 @@
         <option value="$PROJECT_DIR$/models/revenueCommitment.py" />
         <option value="$PROJECT_DIR$/models/commitmentTiered.py" />
         <option value="$PROJECT_DIR$/models/services.py" />
-        <option value="$PROJECT_DIR$/models/dealModels/balancedUnbalanced.py" />
-        <option value="$PROJECT_DIR$/models/dealModels/tiered.py" />
-        <option value="$PROJECT_DIR$/models/dealModels/sendOrPay.py" />
-        <option value="$PROJECT_DIR$/models/dealModels/revenueCommitment.py" />
-        <option value="$PROJECT_DIR$/models/dealModels/invoiceFlat.py" />
-        <option value="$PROJECT_DIR$/models/dealModels/standardFlat.py" />
         <option value="$PROJECT_DIR$/models/network.py" />
         <option value="$PROJECT_DIR$/models/agreements.py" />
-        <option value="$PROJECT_DIR$/static/data/tiers_TMobileGroup.json" />
-        <option value="$PROJECT_DIR$/static/data/tiers_VFGroup.json" />
+        <option value="$PROJECT_DIR$/models/dealModels/balancedUnbalanced.py" />
+        <option value="$PROJECT_DIR$/models/dealModels/invoiceFlat.py" />
+        <option value="$PROJECT_DIR$/models/dealModels/revenueCommitment.py" />
+        <option value="$PROJECT_DIR$/models/dealModels/sendOrPay.py" />
+        <option value="$PROJECT_DIR$/models/dealModels/standardFlat.py" />
+        <option value="$PROJECT_DIR$/utils/stringTockenizer.py" />
+        <option value="$PROJECT_DIR$/teleena.xml" />
+        <option value="$PROJECT_DIR$/models/dealModels/tiered.py" />
         <option value="$PROJECT_DIR$/app.py" />
+        <option value="$PROJECT_DIR$/static/data/tiers_VFGroup.json" />
+        <option value="$PROJECT_DIR$/static/data/tiers_TMobileGroup.json" />
       </list>
     </option>
   </component>
@@ -498,19 +443,33 @@
       <option name="project" value="LOCAL" />
       <updated>1538567035122</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="fix foreign key issue with introducing of the app_context functionality">
+      <created>1538574416866</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1538574416866</updated>
+    </task>
+    <task id="LOCAL-00014" summary="fix foreign key issue with introducing of the app_context functionality">
+      <created>1538576440349</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1538576440349</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="25" width="1920" height="990" extended-state="6" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.16915688" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.17235859" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32906976" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.41511628" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.37558138" />
+      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.41511628" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.47790697" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
@@ -530,13 +489,13 @@
       <window_info anchor="right" id="Database" order="4" visible="true" weight="0.17075774" />
     </layout>
     <layout-to-restore>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.15955175" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.17235859" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Find" order="1" weight="0.32946634" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.32946634" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.39907193" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.32906976" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.41511628" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.37558138" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
@@ -544,9 +503,9 @@
       <window_info anchor="bottom" id="Version Control" order="8" show_stripe_button="false" />
       <window_info anchor="bottom" id="Database Changes" order="9" />
       <window_info anchor="bottom" id="REST Client" order="10" weight="0.36078885" />
-      <window_info anchor="bottom" id="Terminal" order="11" weight="0.32946634" />
+      <window_info anchor="bottom" id="Terminal" order="11" weight="0.33023256" />
       <window_info anchor="bottom" id="Event Log" order="12" side_tool="true" />
-      <window_info anchor="bottom" id="Python Console" order="13" weight="0.32946634" />
+      <window_info anchor="bottom" id="Python Console" order="13" weight="0.32906976" />
       <window_info anchor="bottom" id="Database Console" order="14" weight="0.32946634" />
       <window_info anchor="bottom" id="Inspection Results" order="15" weight="0.32946634" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
@@ -572,8 +531,8 @@
       <breakpoints>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/app.py</url>
-          <line>54</line>
-          <option name="timeStamp" value="13" />
+          <line>65</line>
+          <option name="timeStamp" value="7" />
         </line-breakpoint>
       </breakpoints>
       <default-breakpoints>
@@ -586,26 +545,6 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/venv/lib/python3.6/site-packages/easy-install.pth">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/3e75d996-9a9c-456e-bc5b-a986b4b2ded4/console.sql">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="4" column="16" selection-start-line="4" selection-start-column="11" selection-end-line="4" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/venv/lib/python3.6/site-packages/sqlalchemy/sql/schema.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="163">
-          <caret line="90" selection-start-line="90" selection-end-line="90" />
-        </state>
-      </provider>
-    </entry>
     <entry file="das://3e75d996-9a9c-456e-bc5b-a986b4b2ded4/schema/steeringop/table/users" />
     <entry file="file://$PROJECT_DIR$/database/outbound.py" />
     <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/1af5f99c-f184-430d-8010-5f597f4aa2bc/console.sql">
@@ -626,24 +565,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file:///usr/lib/python3.6/socketserver.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="163">
-          <caret line="466" selection-start-line="466" selection-end-line="466" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/venv/lib/python3.6/site-packages/Flask_SQLAlchemy-2.3.2-py3.6.egg/flask_sqlalchemy/__init__.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="120">
           <caret line="793" selection-start-line="793" selection-end-line="793" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/venv/lib/python3.6/site-packages/werkzeug/serving.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="142">
-          <caret line="257" selection-start-line="257" selection-end-line="257" />
         </state>
       </provider>
     </entry>
@@ -667,13 +592,6 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/static/db/dbinit.sql" />
     <entry file="file://$PROJECT_DIR$/utils/dbinit.py" />
-    <entry file="file://$PROJECT_DIR$/venv/lib/python3.6/site-packages/flask/app.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="195">
-          <caret line="1854" selection-start-line="1854" selection-end-line="1854" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/config.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="90">
@@ -689,17 +607,6 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/database/inbound.py" />
-    <entry file="file://$PROJECT_DIR$/utils/jsonParser.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="4" lean-forward="true" selection-start-line="4" selection-end-line="4" />
-          <folding>
-            <marker date="1538066198666" expanded="true" signature="44:46" ph="..." />
-            <marker date="1538066198666" expanded="true" signature="81:82" ph="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/service/agreementDetails.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="135">
@@ -749,13 +656,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/models/diot.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="10" column="9" selection-start-line="10" selection-start-column="4" selection-end-line="10" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/models/diot.py" />
     <entry file="file://$PROJECT_DIR$/models/coverage.py">
       <provider selected="true" editor-type-id="text-editor">
         <state>
@@ -763,51 +664,8 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/models/services.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="9" column="52" lean-forward="true" selection-start-line="9" selection-start-column="52" selection-end-line="9" selection-end-column="52" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/models/dealModels/commitmentTiered.py">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/models/dealModels/tiered.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret selection-end-line="22" selection-end-column="81" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/models/dealModels/sendOrPay.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret selection-end-line="22" selection-end-column="92" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/models/dealModels/revenueCommitment.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret lean-forward="true" selection-end-line="20" selection-end-column="68" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/models/dealModels/invoiceFlat.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="300">
-          <caret line="20" column="55" selection-end-line="20" selection-end-column="75" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/models/dealModels/standardFlat.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="300">
-          <caret line="20" column="63" lean-forward="true" selection-start-line="20" selection-start-column="63" selection-end-line="20" selection-end-column="63" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/models/services.py" />
+    <entry file="file://$PROJECT_DIR$/models/dealModels/commitmentTiered.py" />
     <entry file="file://$PROJECT_DIR$/models/country.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="105">
@@ -824,15 +682,106 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/models/dealModels/balancedUnbalanced.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="45">
-          <caret line="3" lean-forward="true" selection-start-line="3" selection-end-line="3" />
+        <state relative-caret-position="150">
+          <caret line="10" column="55" lean-forward="true" selection-start-line="10" selection-start-column="4" selection-end-line="10" selection-end-column="55" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/models/dealModels/invoiceFlat.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="12" column="72" lean-forward="true" selection-start-line="12" selection-start-column="72" selection-end-line="12" selection-end-column="72" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/models/dealModels/revenueCommitment.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="210">
+          <caret line="14" column="89" lean-forward="true" selection-start-line="14" selection-start-column="89" selection-end-line="14" selection-end-column="89" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/models/dealModels/sendOrPay.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="360">
+          <caret line="24" column="49" selection-start-line="24" selection-start-column="49" selection-end-line="24" selection-end-column="49" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/models/dealModels/standardFlat.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="330">
+          <caret line="22" column="49" selection-start-line="22" selection-start-column="49" selection-end-line="22" selection-end-column="49" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="das://1af5f99c-f184-430d-8010-5f597f4aa2bc/schema/steeringiot/table/balancedUnbalanced">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/utils/stringTockenizer.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="7" selection-start-line="7" selection-end-line="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/teleena.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="190">
+          <caret line="10" column="30" lean-forward="true" selection-start-line="10" selection-start-column="30" selection-end-line="10" selection-end-column="30" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/models/dealModels/tiered.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="390">
+          <caret line="26" column="92" selection-start-line="26" selection-start-column="92" selection-end-line="26" selection-end-column="92" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/models/agreements.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="315">
-          <caret line="21" column="41" selection-start-line="21" selection-start-column="41" selection-end-line="21" selection-end-column="41" />
+        <state relative-caret-position="135">
+          <caret line="9" column="10" selection-start-line="9" selection-start-column="4" selection-end-line="9" selection-end-column="15" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file:///usr/lib/python3.6/threading.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="140">
+          <caret line="863" selection-start-line="863" selection-end-line="863" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file:///usr/lib/python3.6/socketserver.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="192">
+          <caret line="654" selection-start-line="654" selection-end-line="654" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/venv/lib/python3.6/site-packages/werkzeug/serving.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="252">
+          <caret line="300" selection-start-line="300" selection-end-line="300" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/venv/lib/python3.6/site-packages/flask/cli.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="140">
+          <caret line="323" selection-start-line="323" selection-end-line="323" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file:///usr/lib/python3.6/http/server.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="155">
+          <caret line="418" selection-start-line="418" selection-end-line="418" />
         </state>
       </provider>
     </entry>
@@ -843,27 +792,52 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/static/data/tiers_TMobileGroup.json">
+    <entry file="file://$PROJECT_DIR$/utils/jsonParser.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="9" column="21" lean-forward="true" selection-start-line="9" selection-start-column="21" selection-end-line="9" selection-end-column="21" />
+        <state relative-caret-position="60">
+          <caret line="4" lean-forward="true" selection-start-line="4" selection-end-line="4" />
+          <folding>
+            <marker date="1538066198666" expanded="true" signature="44:46" ph="..." />
+            <marker date="1538066198666" expanded="true" signature="81:82" ph="..." />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/static/data/tiers_VFGroup.json">
+    <entry file="file://$PROJECT_DIR$/venv/lib/python3.6/site-packages/flask/app.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="8" column="31" lean-forward="true" selection-start-line="8" selection-start-column="31" selection-end-line="8" selection-end-column="31" />
+        <state relative-caret-position="202">
+          <caret line="1854" selection-start-line="1854" selection-end-line="1854" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="315">
-          <caret line="57" column="52" selection-start-line="57" selection-start-column="36" selection-end-line="57" selection-end-column="52" />
+        <state relative-caret-position="200">
+          <caret line="65" selection-start-line="65" selection-end-line="65" />
           <folding>
             <element signature="e#0#14#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/static/data/tiers_VFGroup.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="38" column="19" selection-start-line="38" selection-start-column="19" selection-end-line="38" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/static/data/tiers_TMobileGroup.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="196">
+          <caret line="20" column="18" selection-start-line="20" selection-start-column="18" selection-end-line="20" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="das://1af5f99c-f184-430d-8010-5f597f4aa2bc/schema/steeringiot/table/tiered">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
         </state>
       </provider>
     </entry>

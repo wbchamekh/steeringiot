@@ -50,12 +50,38 @@ def setup():
     for currentFile in currentDirectory.iterdir():
         jsonurl = currentFile
         jsonType = JsonParser().jsonParser(jsonurl)
+        # start parsing the basic information:
         basic = jsonType['DiscountAgreement']['Basic']
         nw = basic['Network']
         network = Network.query.filter_by(alias=nw).first()
         db.session.add(
             AgreementDetails(basic['AgreementId'], basic['AParty'], basic['BParty'], basic['Start'], basic['Stop'],
                              basic['Autoreconduction'], basic['GroupDeal'], basic['DealStatus'], network.id))
+
+        # Parse the discount details for inbound:
+        # inbound = jsonType['DiscountAgreement']['Details']['Inbound']
+        inbound = jsonType['DiscountAgreement']['Details']['Inbound']
+        model = inbound['Model']['Name']
+        agreementId = basic['AgreementId']
+        agreement = AgreementDetails.query.filter_by(agreementId=agreementId).first()
+        if model == "Tiered":
+            # voice mo
+            db.session.add(Tiered('voice mo', 'inbound', inbound['Model']['VoiceMOTiers'],
+                                  inbound['Model']['tieredService'], inbound['Model']['VoiceMOTarifs'], agreement.id))
+            # voice mt
+            db.session.add(Tiered('voice mt', 'inbound', inbound['Model']['VoiceMTTiers'],
+                                  inbound['Model']['tieredService'], inbound['Model']['VoiceMTTarifs'], agreement.id))
+            # sms mo
+            db.session.add(Tiered('sms mo', 'inbound', inbound['Model']['SMSMOTiers'],
+                                  inbound['Model']['tieredService'], inbound['Model']['SMSMOTarifs'], agreement.id))
+            # sms mt
+            db.session.add(Tiered('sms mt', 'inbound', inbound['Model']['SMSMTTiers'],
+                                  inbound['Model']['tieredService'], inbound['Model']['SMSMTTarifs'], agreement.id))
+            # data
+            db.session.add(Tiered('data', 'inbound', inbound['Model']['DataTiers'],
+                                  inbound['Model']['tieredService'], inbound['Model']['DataTarifs'], agreement.id))
+
+        # db.session.add(Tiered(inbound['Tiers']['Direction']))
 
         db.session.commit()
 
