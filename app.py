@@ -59,31 +59,69 @@ def setup():
                              basic['Autoreconduction'], basic['GroupDeal'], basic['DealStatus'], network.id))
 
         # Parse the discount details for inbound:
-        # inbound = jsonType['DiscountAgreement']['Details']['Inbound']
         inbound = jsonType['DiscountAgreement']['Details']['Inbound']
         model = inbound['Model']['Name']
         agreementId = basic['AgreementId']
         agreement = AgreementDetails.query.filter_by(agreementId=agreementId).first()
         if model == "Tiered":
             # voice mo
-            db.session.add(Tiered('voice mo', 'inbound', inbound['Model']['VoiceMOTiers'],
+            db.session.add(Tiered('Voice MOC', 'inbound', inbound['Model']['VoiceMOTiers'],
                                   inbound['Model']['tieredService'], inbound['Model']['VoiceMOTarifs'], agreement.id))
             # voice mt
-            db.session.add(Tiered('voice mt', 'inbound', inbound['Model']['VoiceMTTiers'],
+            db.session.add(Tiered('Voice MTC', 'inbound', inbound['Model']['VoiceMTTiers'],
                                   inbound['Model']['tieredService'], inbound['Model']['VoiceMTTarifs'], agreement.id))
             # sms mo
-            db.session.add(Tiered('sms mo', 'inbound', inbound['Model']['SMSMOTiers'],
+            db.session.add(Tiered('SMS MOC', 'inbound', inbound['Model']['SMSMOTiers'],
                                   inbound['Model']['tieredService'], inbound['Model']['SMSMOTarifs'], agreement.id))
             # sms mt
-            db.session.add(Tiered('sms mt', 'inbound', inbound['Model']['SMSMTTiers'],
+            db.session.add(Tiered('SMS MTC', 'inbound', inbound['Model']['SMSMTTiers'],
                                   inbound['Model']['tieredService'], inbound['Model']['SMSMTTarifs'], agreement.id))
             # data
-            db.session.add(Tiered('data', 'inbound', inbound['Model']['DataTiers'],
+            db.session.add(Tiered('DATA', 'inbound', inbound['Model']['DataTiers'],
                                   inbound['Model']['tieredService'], inbound['Model']['DataTarifs'], agreement.id))
 
-        # db.session.add(Tiered(inbound['Tiers']['Direction']))
+        # Parse the discount details for outbound:
+        outbound = jsonType['DiscountAgreement']['Details']['Outbound']
+        model = outbound['Model']['Name']
+        agreementId = basic['AgreementId']
+        agreement = AgreementDetails.query.filter_by(agreementId=agreementId).first()
+        if model == "Tiered":
+            # voice mo
+            db.session.add(Tiered('Voice MOC', 'outbound', inbound['Model']['VoiceMOTiers'],
+                                  inbound['Model']['tieredService'], inbound['Model']['VoiceMOTarifs'],
+                                  agreement.id))
+            # voice mt
+            db.session.add(Tiered('Voice MTC', 'outbound', inbound['Model']['VoiceMTTiers'],
+                                  inbound['Model']['tieredService'], inbound['Model']['VoiceMTTarifs'],
+                                  agreement.id))
+            # sms mo
+            db.session.add(Tiered('SMS MOC', 'outbound', inbound['Model']['SMSMOTiers'],
+                                  inbound['Model']['tieredService'], inbound['Model']['SMSMOTarifs'], agreement.id))
+            # sms mt
+            db.session.add(Tiered('SMS MTC', 'outbound', inbound['Model']['SMSMTTiers'],
+                                  inbound['Model']['tieredService'], inbound['Model']['SMSMTTarifs'], agreement.id))
+            # data
+            db.session.add(Tiered('DATA', 'outbound', inbound['Model']['DataTiers'],
+                                  inbound['Model']['tieredService'], inbound['Model']['DataTarifs'], agreement.id))
 
-        db.session.commit()
+    # define the siot path:
+    iotPath = '/home/walid/devops/steeringiot/static/siot'
+    pathIot = pathlib.Path(iotPath)
+
+    # Walk through the siot Directory, parse the iots from th json files and persist the data
+    for currentIOTFile in pathIot.iterdir():
+        jsonIOT = currentIOTFile
+        jsonIOTType = JsonParser().jsonParser(jsonIOT)
+        coverageAlias = jsonIOTType['alias']
+        coverage = Coverage.query.filter_by(alias=coverageAlias).first()
+        db.session.add(StandardIot(jsonIOTType['alias'], jsonIOTType['service'], jsonIOTType['currency'],
+                                   jsonIOTType['destination'],
+                                   jsonIOTType['iotAirtimePeak'], jsonIOTType['iotAirtimeOffPeak'],
+                                   jsonIOTType['iotIddPeak'], jsonIOTType['iotIddOffPeak'],
+                                   jsonIOTType['firstChargingInterval'], jsonIOTType['secondChargingInterval'],
+                                   jsonIOTType['taxPer'], jsonIOTType['taxFix'], '1'))
+
+    db.session.commit()
 
 
 @app.route('/')

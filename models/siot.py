@@ -31,7 +31,7 @@ class StandardIot(db.Model):
         self.destination = destination
         self.iotairtimepeak = iotairtimepeak
         self.iotairtimeoffpeak = iotairtimeoffpeak
-        self.iotiddoffpeak = iotiddpeak
+        self.iotiddpeak = iotiddpeak
         self.iotiddoffpeak = iotiddoffpeak
         self.firstChargingInt = firstChargingInt
         self.secondChargingInt = secondChargingInt
