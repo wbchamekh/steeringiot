@@ -113,13 +113,15 @@ def setup():
         jsonIOT = currentIOTFile
         jsonIOTType = JsonParser().jsonParser(jsonIOT)
         coverageAlias = jsonIOTType['alias']
-        coverage = Coverage.query.filter_by(alias=coverageAlias).first()
+        networkAlias = jsonIOTType['network']
+        network_fk = Network.query.filter_by(alias=networkAlias).first()
+        coverage = Coverage.query.filter_by(alias=coverageAlias, network_fk=network_fk.id).first()
         db.session.add(StandardIot(jsonIOTType['alias'], jsonIOTType['service'], jsonIOTType['currency'],
                                    jsonIOTType['destination'],
                                    jsonIOTType['iotAirtimePeak'], jsonIOTType['iotAirtimeOffPeak'],
                                    jsonIOTType['iotIddPeak'], jsonIOTType['iotIddOffPeak'],
                                    jsonIOTType['firstChargingInterval'], jsonIOTType['secondChargingInterval'],
-                                   jsonIOTType['taxPer'], jsonIOTType['taxFix'], '1'))
+                                   jsonIOTType['taxPer'], jsonIOTType['taxFix'], coverage.id))
 
     db.session.commit()
 
